@@ -1,8 +1,7 @@
-#include "freertos/FreeRTOS.h"
 #include "nvs_flash.h" 		   	//non volatile storage
 
 
-#include "wifi_app.h"
+#include "data_process.h"
 
 
 /* LOG tags: */
@@ -27,6 +26,7 @@ void app_main(void)
 	Udp_socket_connection();
 	ESP_LOGI(TAG_MAIN, "udp socket connection");
 
+	Allocate_data_memory();
 
 
     while(true)
